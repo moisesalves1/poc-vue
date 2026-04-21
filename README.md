@@ -35,6 +35,20 @@ npm install
 npm run dev
 ```
 
+### Run Frontend + json-server (Mock Backend)
+
+```sh
+npm run dev:full
+```
+
+API mock available at `http://localhost:3000/users` using data from `db.json`.
+
+If you want to run only the backend:
+
+```sh
+npm run api
+```
+
 ### Type-Check, Compile and Minify for Production
 
 ```sh

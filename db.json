@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Ada Lovelace",
+      "username": "ada",
+      "email": "ada@poc.dev"
+    },
+    {
+      "id": 2,
+      "name": "Grace Hopper",
+      "username": "grace",
+      "email": "grace@poc.dev"
+    },
+    {
+      "id": 3,
+      "name": "Linus Torvalds",
+      "username": "linus",
+      "email": "linus@poc.dev"
+    }
+  ]
+}
