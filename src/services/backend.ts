@@ -1,7 +1,7 @@
 export interface User {
-  id: number
+  id: string
   name: string
-  username: string
+  username?: string
   email: string
 }
 
@@ -11,7 +11,12 @@ export interface CreateUserPayload {
 }
 
 export interface CreatedUser {
-  id: number
+  id: string
+  name: string
+  email: string
+}
+
+export interface UpdateUserPayload {
   name: string
   email: string
 }
@@ -38,9 +43,30 @@ export function getUsers(): Promise<User[]> {
   return request<User[]>('/users')
 }
 
+export function getUserById(userId: string): Promise<User> {
+  return request<User>(`/users/${userId}`)
+}
+
 export function createUser(payload: CreateUserPayload): Promise<CreatedUser> {
   return request<CreatedUser>('/users', {
     method: 'POST',
     body: JSON.stringify(payload)
   })
+}
+
+export function updateUser(userId: string, payload: UpdateUserPayload): Promise<User> {
+  return request<User>(`/users/${userId}`, {
+    method: 'PATCH',
+    body: JSON.stringify(payload)
+  })
+}
+
+export async function deleteUser(userId: string): Promise<void> {
+  const response = await fetch(`${API_BASE_URL}/users/${userId}`, {
+    method: 'DELETE'
+  })
+
+  if (!response.ok) {
+    throw new Error(`Erro ${response.status}: falha ao remover /users/${userId}`)
+  }
 }
