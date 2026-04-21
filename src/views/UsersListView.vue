@@ -2,7 +2,7 @@
 import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 
-import UserList from '../components/UserList.vue'
+import UserList from '../components/User/UserList.vue'
 import { getUsers, type User } from '../services/backend'
 
 const router = useRouter()

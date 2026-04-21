@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
 
-import UserCreate from '../components/UserCreate.vue'
+import UserCreate from '../components/User/UserCreate.vue'
 
 const router = useRouter()
 

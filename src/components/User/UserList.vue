@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { deleteUser, type User } from '../services/backend'
+import { deleteUser, type User } from '../../services/backend'
 
 const props = defineProps<{
   users: User[]

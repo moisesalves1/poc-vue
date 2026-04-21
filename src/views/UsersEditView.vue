@@ -2,7 +2,7 @@
 import { computed, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 
-import UserEdit from '../components/UserEdit.vue'
+import UserEdit from '../components/User/UserEdit.vue'
 import { getUserById, type User } from '../services/backend'
 
 const route = useRoute()

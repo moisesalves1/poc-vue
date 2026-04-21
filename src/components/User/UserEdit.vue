@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
-import { updateUser, type User } from '../services/backend'
+import { updateUser, type User } from '../../services/backend'
 
 const props = defineProps<{
   user: User | null

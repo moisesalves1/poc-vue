@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { createUser, type CreatedUser } from '../services/backend'
+import { createUser, type CreatedUser } from '../../services/backend'
 
 const emit = defineEmits<{
   created: [user: CreatedUser]
